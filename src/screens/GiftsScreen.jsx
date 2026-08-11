@@ -242,7 +242,7 @@ function GiftBox({ n, opened, locked, onClick }) {
           style={{ position: "relative" }}
         >
           <img
-            src="public/gift.png"
+            src="/gift.png"
             alt="cadeau"
             style={{
               width: 100,
@@ -365,7 +365,7 @@ export default function GiftsScreen() {
     >
       {/* Fond ciel dynamique */}
       <div className="absolute inset-0 z-0" style={{
-        backgroundImage: "url('public/sky.png')",
+        backgroundImage: "url('sky.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         filter: getSkyStyle(hour).filter,
