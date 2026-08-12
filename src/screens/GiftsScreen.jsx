@@ -19,13 +19,13 @@ function getSkyStyle(hour) {
 
 function isAfter2330() {
   const now = new Date()
-  return now.getHours() >= 23 && now.getMinutes() >= 30
+  return now.getHours() >= 11
 }
 
 function timeUntil2330() {
   const now = new Date()
   const target = new Date()
-  target.setHours(23, 30, 0, 0)
+  target.setHours(11, 0, 0, 0)
   if (now >= target) return null
   const diff = target - now
   const h = Math.floor(diff / 3600000)
@@ -180,7 +180,7 @@ function LockedModal({ onClose, countdown }) {
           className="text-5xl mb-3"
         >🔒</motion.div>
         <div className="text-white text-xl font-black mb-1">Ce cadeau est verrouillé</div>
-        <div className="text-gray-400 text-sm mb-4">Il s'ouvre à <strong className="text-white">23h30</strong> ce soir...</div>
+        <div className="text-gray-400 text-sm mb-4">Il s'ouvre à <strong className="text-white">11h00</strong> ce soir...</div>
         {countdown && (
           <div className="flex justify-center gap-3 mb-4">
             {[{ v: countdown.h, l: "h" }, { v: countdown.m, l: "min" }, { v: countdown.s, l: "sec" }].map(({ v, l }) => (
@@ -326,7 +326,7 @@ function GiftBox({ n, opened, locked, onClick }) {
           className="text-xs text-gray-300 text-center"
           style={{ textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}
         >
-          disponible à 23h30
+          disponible à 11h00
         </motion.div>
       )}
     </motion.div>
