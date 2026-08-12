@@ -196,7 +196,7 @@ export default function App() {
     <>
       <audio ref={audioRef} src="/music.mp3" preload="auto" />
       <div
-        className="relative min-h-screen bg-black overflow-hidden flex flex-col items-center justify-center py-12"
+        className="relative min-h-dvh bg-black overflow-hidden flex flex-col items-center justify-center py-12"
         style={{ fontFamily: "'Courier New', monospace" }}
       >
         {/* Scan line */}
