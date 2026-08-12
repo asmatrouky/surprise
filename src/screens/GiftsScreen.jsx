@@ -1,20 +1,50 @@
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
-function getSkyStyle(hour) {
-  if (hour >= 5 && hour < 8) {
-    return { filter: "brightness(0.7) saturate(1.2) sepia(0.3)", overlay: "rgba(255,180,120,0.15)" }
-  } else if (hour >= 8 && hour < 12) {
-    return { filter: "brightness(1.0) saturate(1.1)", overlay: "rgba(255,255,255,0.03)" }
-  } else if (hour >= 12 && hour < 17) {
-    return { filter: "brightness(1.1) saturate(1.2)", overlay: "rgba(100,180,255,0.05)" }
-  } else if (hour >= 17 && hour < 20) {
-    return { filter: "brightness(0.8) saturate(1.4) sepia(0.4) hue-rotate(-10deg)", overlay: "rgba(255,100,50,0.15)" }
-  } else if (hour >= 20 && hour < 23) {
-    return { filter: "brightness(0.45) saturate(0.9) hue-rotate(20deg)", overlay: "rgba(30,20,80,0.3)" }
-  } else {
-    return { filter: "brightness(0.2) saturate(0.7) hue-rotate(30deg)", overlay: "rgba(10,10,40,0.5)" }
+const STARS = Array.from({ length: 140 }).map((_, i) => {
+  const size = Math.random() * 2 + 0.6
+  return {
+    id: i,
+    top: Math.random() * 100,
+    left: Math.random() * 100,
+    size,
+    duration: 2 + Math.random() * 3.5,
+    delay: Math.random() * 5,
+    opacity: Math.random() * 0.5 + 0.4,
+    glow: size > 1.8 ? `0 0 ${size * 3}px rgba(255,255,255,0.9)` : "none",
   }
+})
+
+function GalaxyBackground() {
+  return (
+    <div className="absolute inset-0 z-0" style={{ overflow: "hidden" }}>
+      <div className="absolute inset-0" style={{
+        background: "radial-gradient(ellipse at 20% 15%, #241a45 0%, #120b2e 35%, #050310 65%, #000000 100%)"
+      }} />
+      <div className="absolute inset-0" style={{
+        background: `
+          radial-gradient(circle at 15% 25%, rgba(120,80,255,0.18), transparent 40%),
+          radial-gradient(circle at 85% 15%, rgba(255,80,150,0.12), transparent 35%),
+          radial-gradient(circle at 75% 80%, rgba(60,120,255,0.15), transparent 45%)
+        `,
+        filter: "blur(10px)",
+      }} />
+      {STARS.map(s => (
+        <div key={s.id} className="gs-star" style={{
+          top: `${s.top}%`,
+          left: `${s.left}%`,
+          width: s.size,
+          height: s.size,
+          opacity: s.opacity,
+          animationDuration: `${s.duration}s`,
+          animationDelay: `${s.delay}s`,
+          boxShadow: s.glow,
+        }} />
+      ))}
+      <div className="gs-shooting" style={{ top: "12%", left: "60%", animationDelay: "1.5s" }} />
+      <div className="gs-shooting" style={{ top: "35%", left: "10%", animationDelay: "6s" }} />
+    </div>
+  )
 }
 
 function isAfter2330() {
@@ -101,7 +131,7 @@ function RestoModal({ onClose }) {
           <div className="absolute inset-0 flex items-center justify-center text-5xl">🌌</div>
         </div>
         <div className="text-white text-xs tracking-widest mb-2 opacity-60">CADEAU N°2 — DÉCLASSIFIÉ</div>
-        <div className="text-white text-2xl font-black mb-3" style={{ textShadow: "0 0 20px rgba(150,100,255,0.8)" }}>✨ ON CONTINU L'AVENTURE ✨</div>
+        <div className="text-white text-2xl font-black mb-3" style={{ textShadow: "0 0 15px rgba(150,100,255,0.8)" }}>✨ ON CONTINU L'AVENTURE ✨</div>
         <div className="text-gray-300 text-sm leading-relaxed mb-4 space-y-2">
         <p>Ce soir, on observe l'éclipse ensemble.</p>
         <p>Et après... on continue le voyage. 🌌</p>
@@ -140,8 +170,8 @@ function PlaneModal({ onClose }) {
           transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
           className="text-6xl mb-3"
         >✈️</motion.div>
-        <div className="text-white text-xs tracking-widest mb-2 opacity-60">CADEAU N°3 — La garnde surprise</div>
-        <div className="text-white text-2xl font-black mb-3" style={{ textShadow: "0 0 20px rgba(50,150,255,0.8)" }}>TU VAS VOLER 🛩️</div>
+        <div className="text-white text-xs tracking-widest mb-2 opacity-60">CADEAU N°3 — La garande surprise</div>
+        <div className="text-white text-2xl font-black mb-3" style={{ textShadow: "0 0 20px rgba(50,150,255,0.8)" }}>TU VAS PILOTER 🛩️</div>
         <div className="text-gray-300 text-sm leading-relaxed mb-4 space-y-2">
           <p>Cette année, pour ton anniversaire, j'ai voulu te rapprocher de tes rêves ☁️</p>
           <p>J'ai réservé pour toi une <strong className="text-white">initiation au pilotage d'avion ✈️ </strong>.</p>
@@ -338,12 +368,10 @@ export default function GiftsScreen() {
   const [openModal, setOpenModal] = useState(null)
   const [opened, setOpened] = useState([false, false, false])
   const [countdown, setCountdown] = useState(timeUntil2330())
-  const [hour, setHour] = useState(new Date().getHours())
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCountdown(timeUntil2330())
-      setHour(new Date().getHours())
     }, 1000)
     return () => clearInterval(interval)
   }, [])
@@ -368,19 +396,8 @@ export default function GiftsScreen() {
         position: "relative"
       }}
     >
-      {/* Fond ciel dynamique */}
-      <div className="absolute inset-0 z-0" style={{
-        backgroundImage: "url('sky.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        filter: getSkyStyle(hour).filter,
-        transition: "filter 2s ease",
-      }} />
-      {/* Overlay selon l'heure */}
-      <div className="absolute inset-0 z-0" style={{
-        background: getSkyStyle(hour).overlay,
-        transition: "background 2s ease",
-      }} />
+      {/* Fond galaxy étoilé */}
+      <GalaxyBackground />
 
       <div className="relative z-10 flex flex-col items-center gap-12 px-6 text-center w-full">
 

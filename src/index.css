@@ -8,3 +8,37 @@ html, body, #root {
   overscroll-behavior: none;
   background-color: #000;
 }
+
+.gs-star {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  animation-name: gs-twinkle;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes gs-twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+
+.gs-shooting {
+  position: absolute;
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.95), rgba(255,255,255,0));
+  border-radius: 999px;
+  opacity: 0;
+  animation-name: gs-shoot;
+  animation-duration: 9s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+@keyframes gs-shoot {
+  0% { opacity: 0; transform: rotate(-35deg) translateX(0); }
+  2% { opacity: 1; }
+  14% { opacity: 0; transform: rotate(-35deg) translateX(320px); }
+  100% { opacity: 0; transform: rotate(-35deg) translateX(320px); }
+}
