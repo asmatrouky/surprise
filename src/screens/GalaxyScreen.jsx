@@ -15,11 +15,11 @@ const plates = [
 ];
 
 const ambientPhrases = [
-  'MON AMOUR ❤️', 'MON BEBE ❤️', 'MON PAIN ❤️', 'MON CHERI ❤️',
-  'MON BFF ❤️', ' AMOUCHINW ❤️', 'AMOUR DE MA VIE ❤️', 'MON COEUR ❤️',
-  'MON AMOUR ❤️', 'AMOUCHINW ❤️', 'MON HOMME ❤️', "MON DESTIN ❤️",
-  'MON AMOUREUX ❤️', ' MON BFF ❤️', ' ARGAZINW ❤️', 'AMOUR DE MA VIE ❤️',
-  'MON CHAT ❤️', 'AHBIBINOU ❤️',
+  'MON AMOUR', 'MON BEBE', 'MON PAIN', 'MON CHERI ',
+  'MON BFF', ' AMOUCHINW', 'AMOUR DE MA VIE', 'MON COEUR',
+  'MON AMOUR', 'AMOUCHINW', 'MON HOMME', "MON DESTIN",
+  'MON AMOUREUX', ' MON BFF', ' ARGAZINW', 'AMOUR DE MA VIE',
+  'MON CHAT', 'AHBIBINOU',
 ];
 
 function mulberry32(a) {

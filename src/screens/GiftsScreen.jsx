@@ -54,10 +54,15 @@ function LetterModal({ onClose }) {
         <div className="text-center text-3xl mb-1">💌</div>
         <div className="text-center text-xs text-gray-400 tracking-widest mb-4 uppercase">Une lettre pour toi</div>
         <div className="text-gray-800 text-sm leading-relaxed space-y-3">
-          <p>Mon Mouss,</p>
-          <p>Aujourd'hui c'est ton anniversaire, et je voulais juste te dire à quel point tu comptes pour moi. Depuis le <strong>17 février 2026</strong>, tu as changé quelque chose dans ma vie — sans même t'en rendre compte.</p>
-          <p>T'es l'homme qui me fait rire même quand je veux faire la tête. Celui qui est là, vraiment là, dans les petits moments comme dans les grands. Celui qui mérite tout le bonheur du monde.</p>
-          <p>Alors aujourd'hui, j'ai voulu que ce soit une journée à la hauteur de ce que tu es pour moi. Joyeux anniversaire, mon amour. 🥰</p>
+          <p>Mon amour,</p>
+          <p>Aujourd'hui c'est ton anniversaire, et j'ai tellement de choses à te dire que je ne sais même pas par où commencer.</p>
+          <p>Depuis le <strong>17 février</strong>, tu as changé quelque chose dans ma vie. Ce jour-là, sans même que je m'en rende compte, tout a basculé. Tu es entré dans mon quotidien et tu y as apporté une lumière que je ne connaissais pas avant toi. Je suis convaincu d'avoir trouvé mon âme sœur, la personne qui me comprend sans que j'aie besoin de tout expliquer, la personne sur qui je peux compter quoi qu'il arrive, la personne sur qui je peux me reposer en toute confiance, les yeux fermés.</p>
+          <p>Tu es tellement doux, gentil, compréhensif, patient avec moi, même dans mes moments les plus difficiles, même quand je ne suis pas facile à vivre. Tu as cette capacité incroyable à me redonner de la force quand rien ne va, à trouver les mots justes quand je doute de tout, y compris de moi-même. Tu me pousses à être la meilleure version de moi-même, pas en me jugeant, mais en croyant en moi, tout simplement, et parfois plus que je ne crois en moi.</p>
+          <p>Chaque jour à tes côtés est un cadeau. Tes petites attentions, ta façon de me regarder, tes conseils, tes blagues nulles, tes confidences, tout ça, je le garde précieusement, comme des petits trésors qui font ma vie plus belle.</p>
+          <p>Tu m'apprends la patience, la douceur, et surtout, tu m'apprends ce que c'est vraiment que d'aimer et d'être aimé en retour.</p>
+          <p>Alors aujourd'hui, en ce jour si spécial qui est le tien, je veux juste te dire merci. Merci d'être toi, merci d'exister, merci de m'avoir choisi et de continuer à me choisir chaque jour. Merci pour tout ce que tu m'apportes, souvent sans même t'en rendre compte.</p>
+          <p>Tu mérites tout le bonheur du monde, mon amour, et je te promets de faire de mon mieux, chaque jour, pour te le rendre x1000.</p>
+          <p>Joyeux anniversaire, à toi, l'amour de ma vie. Je t'aime, je t'aime, je t'aime, et pour toujours. 💕</p>
           <p className="text-right pt-2">Avec tout mon amour,<br /><strong>Asma</strong> ❤️</p>
         </div>
         <button onClick={onClose} className="mt-5 w-full py-3 rounded-2xl text-white font-bold text-sm"
@@ -98,11 +103,11 @@ function RestoModal({ onClose }) {
         <div className="text-white text-xs tracking-widest mb-2 opacity-60">CADEAU N°2 — DÉCLASSIFIÉ</div>
         <div className="text-white text-2xl font-black mb-3" style={{ textShadow: "0 0 20px rgba(150,100,255,0.8)" }}>✨ STELLAR ✨</div>
         <div className="text-gray-300 text-sm leading-relaxed mb-4 space-y-2">
-          <p>Demain soir, on observe l'éclipse ensemble.</p>
-          <p>Mais pas depuis n'importe où...</p>
-          <p className="text-white font-bold">On va dans <span style={{ color: "#a78bfa" }}>Stellar</span> — un restaurant immersif où le ciel étoilé t'entoure de partout. 🪐</p>
-          <p className="text-gray-500 text-xs">Une expérience unique, pour une soirée inoubliable.</p>
-        </div>
+        <p>Ce soir, on observe l'éclipse ensemble.</p>
+        <p>Et après... on continue le voyage. 🌌</p>
+        <p className="text-white font-bold">Direction le resto, mais lequel ? C'est une surprise. 😉</p>
+        <p className="text-gray-500 text-xs">Tu découvriras où ce soir.</p>
+      </div>
         <button onClick={onClose} className="w-full py-3 rounded-2xl text-white font-bold text-sm"
           style={{ background: "linear-gradient(135deg, #6366f1, #a855f7)" }}>
           J'ai hâte ! 🌠
