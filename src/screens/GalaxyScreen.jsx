@@ -4,13 +4,13 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import './GalaxyScreen.css';
 
 const plates = [
-  { name: 'Ma sécurité', message: "Si je pouvais choisir un endroit sûr, ce serait à tes côtés.", src: '/3.png', hue: 355, pattern: 'heart' },
+  { name: 'Ma sécurité', message: "Si je pouvais choisir un endroit sûr, ce serait à tes côtés.", hue: 355, pattern: 'heart' },
   { name: 'Mon amour', message: "Pour toi, qui fais battre mon cœur d'une façon unique.", hue: 0, pattern: 'heart' },
   { name: 'Mon pain', message: " Je te mord ! MIAAAM ", hue: 350, pattern: 'heart' },
   { name: 'Mon meilleur ami', message: "Peu importe ce que je dois vivre, je te veux à mes cotés.", hue: 358, pattern: 'heart' },
   { name: 'L’amour de ma vie', message: "Il n'y a nulle part au monde où je préfère être qu'à tes côtés.", hue: 355, pattern: 'heart' },
   { name: 'Mon amant', message: "Depuis notre premier baiser, je suis accro à toi pour toujours", hue: 0, pattern: 'heart' },
-  { name: 'L’amour de ma vie', message: "Plus le temps passe ensemble, plus je t'aime.", src: '/5.png', hue: 350, pattern: 'heart' },
+  { name: 'L’amour de ma vie', message: "Plus le temps passe ensemble, plus je t'aime.", hue: 350, pattern: 'heart' },
   { name: 'Mon refuge', message: "Quand le monde fait trop de bruit, il me suffit de te parler pour trouver la paix.", hue: 358, pattern: 'heart' },
 ];
 

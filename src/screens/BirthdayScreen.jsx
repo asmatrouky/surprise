@@ -123,55 +123,6 @@ export default function BirthdayScreen({ onNext }) {
       {/* Contenu */}
       <div className="relative z-20 flex flex-col items-center gap-6 px-6 text-center">
 
-        {phase >= 1 && (
-          <motion.div
-            initial={{ scale: 0, rotate: -20 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ type: "spring", stiffness: 200, damping: 12 }}
-            className="text-6xl"
-          >
-            🎂🎉🎈
-          </motion.div>
-        )}
-
-        {phase >= 1 && (
-          <motion.div
-            initial={{ opacity: 0, y: -40, scale: 0.5 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ type: "spring", stiffness: 180, damping: 10, delay: 0.1 }}
-            className="text-6xl font-black tracking-tight leading-none"
-            style={{ color: "#FF6B6B", textShadow: "3px 3px 0px #FFD93D, 6px 6px 0px rgba(0,0,0,0.3)" }}
-          >
-            JOYEUX
-          </motion.div>
-        )}
-
-        {phase >= 1 && (
-          <motion.div
-            initial={{ opacity: 0, y: 40, scale: 0.5 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ type: "spring", stiffness: 180, damping: 10, delay: 0.35 }}
-            className="text-5xl font-black tracking-tight leading-none"
-            style={{ color: "#ffffff", textShadow: "3px 3px 0px #4D96FF, 6px 6px 0px rgba(0,0,0,0.3)" }}
-          >
-            ANNIVERSAIRE
-          </motion.div>
-        )}
-
-        {phase >= 1 && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.7, type: "spring", stiffness: 150 }}
-            className="text-4xl font-black"
-            style={{ color: "#FFD93D", textShadow: "2px 2px 0px #FF922B, 4px 4px 0px rgba(0,0,0,0.3)" }}
-          >
-            Mon amouuuur ! 🥳
-          </motion.div>
-        )}
-
-   
-
         {phase >= 1 && ["🎁","🎊","🎈","✨","🎀","💫"].map((emoji, i) => (
           <motion.span
             key={i}
