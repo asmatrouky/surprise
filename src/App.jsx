@@ -144,11 +144,11 @@ export default function App() {
     if (val === "mustapha" || val === "mouss") {
       setStep(3)
     } else if (val === "") {
-      setPrenomErrorMsg("⚠ Aucune réponse détectée. Identifiez-vous, Agent.")
+      setPrenomErrorMsg("⚠ Aucune réponse détectée.")
       setPrenomError(true)
       setTimeout(() => setPrenomError(false), 2000)
     } else {
-      setPrenomErrorMsg("⛔ RÉPONSE INCORRECTE — Indice : c'est toi, Agent.")
+      setPrenomErrorMsg("⛔ RÉPONSE INCORRECTE")
       setPrenomError(true)
       setTimeout(() => setPrenomError(false), 2000)
     }
@@ -348,7 +348,7 @@ export default function App() {
 
               {!fesseRevealed ? (
                 <div className="w-full space-y-3">
-                  <div className="text-gray-400 text-xs text-center tracking-widest mb-2">— Choisissez avec soin, Agent Mouss.</div>
+                  <div className="text-gray-400 text-xs text-center tracking-widest mb-2">— Choisissez avec soin.</div>
                   {["La gauche 🍑", "La droite 🍑"].map((label, i) => (
                     <motion.button key={i} onClick={() => handleFesseChoice(label)} whileTap={{ scale: 0.97 }}
                       className={`w-full h-14 border text-white text-sm tracking-widest rounded transition-all ${
@@ -363,7 +363,7 @@ export default function App() {
                   <div className="w-full bg-black border border-gray-700 rounded p-4">
                     <div className="text-gray-400 text-xs mb-2">{'>'} ANALYSE EN COURS...</div>
                     <div className="text-white text-sm leading-relaxed tracking-wide">
-                      Dossier déclassifié, Agent Mouss.<br /><br />
+                      Dossier déclassifié<br /><br />
                       La vérité est la suivante :<br />
                       <span className="font-bold">elle les aime autant l'une que l'autre.</span><br /><br />
                       <span className="text-gray-400 text-xs">Mais on passe pour cette fois. 😏</span>
