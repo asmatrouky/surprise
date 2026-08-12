@@ -4,22 +4,22 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import './GalaxyScreen.css';
 
 const plates = [
-  { name: "Tu m'éblouis", message: "Si je pouvais choisir un endroit sûr, ce serait à tes côtés.", src: '/3.png', hue: 355, pattern: 'heart' },
-  { name: 'Pour toi', message: "Pour toi, qui fais battre mon cœur d'une façon unique. Dans chaque souvenir et chaque battement, il y a toi.", hue: 0, pattern: 'heart' },
-  { name: 'Sous les étoiles', message: "Cette nuit-là, on a regardé le ciel ensemble, et j'ai compris qu'aucune étoile ne brille autant que tes yeux.", hue: 350, pattern: 'heart' },
-  { name: 'Pour toujours', message: "Peu importe combien de vies je dois vivre, dans chacune d'elles je te choisirai. Pour toujours et un jour de plus.", hue: 358, pattern: 'heart' },
-  { name: 'Nos aventures', message: "Il n'y a nulle part au monde où je préfère être qu'à tes côtés, à découvrir de nouveaux endroits.", hue: 355, pattern: 'heart' },
-  { name: 'Notre premier baiser', message: "Le jour où nos lèvres se sont rencontrées, l'univers entier a retenu son souffle. Depuis, chacun de tes baisers est ma galaxie préférée.", hue: 0, pattern: 'heart' },
+  { name: 'Ma sécurité', message: "Si je pouvais choisir un endroit sûr, ce serait à tes côtés.", src: '/3.png', hue: 355, pattern: 'heart' },
+  { name: 'Mon amour', message: "Pour toi, qui fais battre mon cœur d'une façon unique.", hue: 0, pattern: 'heart' },
+  { name: 'Mon pain', message: " Je te mord ! MIAAAM ", hue: 350, pattern: 'heart' },
+  { name: 'Mon meilleur ami', message: "Peu importe ce que je dois vivre, je te veux à mes cotés.", hue: 358, pattern: 'heart' },
+  { name: 'L’amour de ma vie', message: "Il n'y a nulle part au monde où je préfère être qu'à tes côtés.", hue: 355, pattern: 'heart' },
+  { name: 'Mon amant', message: "Depuis notre premier baiser, je suis accro à toi pour toujours", hue: 0, pattern: 'heart' },
   { name: 'L’amour de ma vie', message: "Plus le temps passe ensemble, plus je t'aime.", src: '/5.png', hue: 350, pattern: 'heart' },
-  { name: 'Tu es mon refuge', message: "Quand le monde fait trop de bruit, il me suffit de te regarder pour trouver la paix.", hue: 358, pattern: 'heart' },
+  { name: 'Mon refuge', message: "Quand le monde fait trop de bruit, il me suffit de te parler pour trouver la paix.", hue: 358, pattern: 'heart' },
 ];
 
 const ambientPhrases = [
-  'AMOUR ÉTERNEL ❤️', 'INFINI ∞ ❤️', "JE T'AIME ❤️", 'MON AMOUR ❤️',
-  'AMOUR ÉTERNEL ❤️', 'INFINI ∞ ❤️', 'AMOUR DE MA VIE ❤️', 'AMOUR ÉTERNEL ❤️',
-  'INFINI ∞ ❤️', 'AMOUR ÉTERNEL ❤️', 'INFINI ∞ ❤️', "JE T'AIME ❤️",
-  'MON AMOUR ❤️', 'AMOUR ÉTERNEL ❤️', 'INFINI ∞ ❤️', 'AMOUR DE MA VIE ❤️',
-  'AMOUR ÉTERNEL ❤️', 'INFINI ∞ ❤️',
+  'MON AMOUR ❤️', 'MON BEBE ❤️', 'MON PAIN ❤️', 'MON CHERI ❤️',
+  'MON BFF ❤️', ' AMOUCHINW ❤️', 'AMOUR DE MA VIE ❤️', 'MON COEUR ❤️',
+  'MON AMOUR ❤️', 'AMOUCHINW ❤️', 'MON HOMME ❤️', "MON DESTIN ❤️",
+  'MON AMOUREUX ❤️', ' MON BFF ❤️', ' ARGAZINW ❤️', 'AMOUR DE MA VIE ❤️',
+  'MON CHAT ❤️', 'AHBIBINOU ❤️',
 ];
 
 function mulberry32(a) {
@@ -653,9 +653,9 @@ export default function GalaxyScreen({ onNext }) {
 
       <div ref={startOverlayRef} id="start-overlay">
         <div id="start-card">
-          <h1>Notre Amour Galactique</h1>
+          <h1> Joyeux anniversaire mon amour !</h1>
           <img id="start-gif" src="/fondo1.gif" alt="Début" />
-          <p>Prêt à découvrir l'infini de mon amour pour toi ?</p>
+          <p> Met le son et touche les coeurs de la galaxy pour y découvrir quelques mots pour toi ! </p>
           <button ref={startButtonRef} id="start-button">C'est parti !</button>
         </div>
       </div>
