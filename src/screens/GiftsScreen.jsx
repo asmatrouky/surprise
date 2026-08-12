@@ -101,7 +101,7 @@ function RestoModal({ onClose }) {
           <div className="absolute inset-0 flex items-center justify-center text-5xl">🌌</div>
         </div>
         <div className="text-white text-xs tracking-widest mb-2 opacity-60">CADEAU N°2 — DÉCLASSIFIÉ</div>
-        <div className="text-white text-2xl font-black mb-3" style={{ textShadow: "0 0 20px rgba(150,100,255,0.8)" }}>✨ STELLAR ✨</div>
+        <div className="text-white text-2xl font-black mb-3" style={{ textShadow: "0 0 20px rgba(150,100,255,0.8)" }}>✨ ON CONTINU L'AVENTURE ✨</div>
         <div className="text-gray-300 text-sm leading-relaxed mb-4 space-y-2">
         <p>Ce soir, on observe l'éclipse ensemble.</p>
         <p>Et après... on continue le voyage. 🌌</p>
