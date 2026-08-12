@@ -269,7 +269,7 @@ export default function App() {
           {step === 1 && (
             <Wrapper keyName="slider">
               <QuestionHeader num={1} total={3} title="QUESTION DE SÉCURITÉ" />
-              <Terminal>" À quel point tu aimes ta femme ?"</Terminal>
+              <Terminal>" À quel point tu aimes ton amoureuse ?"</Terminal>
 
               <div className="w-full space-y-3">
                 <div className="flex justify-between text-xs text-gray-700 tracking-widest">
@@ -301,7 +301,7 @@ export default function App() {
                   <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }}
                     className="w-full border border-red-500 bg-red-950 rounded p-3 text-center">
                     <div className="text-red-400 text-xs tracking-widest font-bold">⛔ RÉPONSE INCORRECTE</div>
-                    <div className="text-red-600 text-xs mt-1">La réponse correcte est : INFINIMENT.<br />Remets la jauge à fond, Agent Mouss.</div>
+                    <div className="text-red-600 text-xs mt-1">La réponse correcte est : INFINIMENT.<br />Remets la jauge à fond, avant que je te mord !</div>
                   </motion.div>
                 )}
               </AnimatePresence>
