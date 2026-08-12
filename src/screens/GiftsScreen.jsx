@@ -402,7 +402,7 @@ export default function GiftsScreen() {
       <div className="relative z-10 flex flex-col items-center gap-12 px-6 text-center w-full">
 
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-          <div className="text-white text-3xl font-black mb-1" style={{ textShadow: "0 2px 20px rgba(100,150,255,0.5)" }}>
+          <div className="text-white text-3xl font-black mb-4" style={{ textShadow: "0 2px 20px rgba(100,150,255,0.5)" }}>
             Tes cadeaux 🎁
           </div>
           <div className="text-gray-400 text-sm">Appuie sur un cadeau pour l'ouvrir</div>
