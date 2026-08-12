@@ -140,12 +140,12 @@ function PlaneModal({ onClose }) {
           transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
           className="text-6xl mb-3"
         >✈️</motion.div>
-        <div className="text-white text-xs tracking-widest mb-2 opacity-60">CADEAU N°3 — TOP SECRET</div>
+        <div className="text-white text-xs tracking-widest mb-2 opacity-60">CADEAU N°3 — La garnde surprise</div>
         <div className="text-white text-2xl font-black mb-3" style={{ textShadow: "0 0 20px rgba(50,150,255,0.8)" }}>TU VAS VOLER 🛩️</div>
         <div className="text-gray-300 text-sm leading-relaxed mb-4 space-y-2">
-          <p>J'ai réservé pour toi une <strong className="text-white">initiation au pilotage d'avion</strong>.</p>
-          <p>Tu vas tenir les commandes, sentir la liberté à des milliers de mètres d'altitude... ☁️</p>
-          <p className="text-blue-300 font-bold">Parce que t'es fait pour toucher les étoiles, Mouss.</p>
+          <p>Cette année, pour ton anniversaire, j'ai voulu te rapprocher de tes rêves ☁️</p>
+          <p>J'ai réservé pour toi une <strong className="text-white">initiation au pilotage d'avion ✈️ </strong>.</p>
+          <p className="text-blue-300 font-bold"> LU ❤️ .</p>
           <p className="text-gray-500 text-xs">Les détails arrivent très bientôt. 🎁</p>
         </div>
         <button onClick={onClose} className="w-full py-3 rounded-2xl text-white font-bold text-sm"
@@ -388,7 +388,7 @@ export default function GiftsScreen() {
           <div className="text-white text-3xl font-black mb-1" style={{ textShadow: "0 2px 20px rgba(100,150,255,0.5)" }}>
             Tes cadeaux 🎁
           </div>
-          <div className="text-gray-400 text-sm">Appuie sur une boîte pour l'ouvrir</div>
+          <div className="text-gray-400 text-sm">Appuie sur un cadeau pour l'ouvrir</div>
         </motion.div>
 
         {/* 3 boîtes cadeaux */}
