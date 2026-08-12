@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import BirthdayScreen from "./screens/BirthdayScreen"
 import GiftsScreen from "./screens/GiftsScreen"
+import GalaxyScreen from "./screens/GalaxyScreen";
 
 const PASSWORD = "170226"
 
@@ -176,15 +177,23 @@ export default function App() {
     : sliderValue < 99 ? "#d1d5db"
     : "#ffffff"
 
-  if (step === 4) return (
+      if (step === 4) return (
     <>
       <audio ref={audioRef} src="/music.mp3" preload="auto" />
       <MuteBtn muted={muted} onToggle={toggleMute} />
-      <BirthdayScreen onNext={() => setStep(5)} />
+      <GalaxyScreen onNext={() => setStep(5)} />
     </>
   )
 
   if (step === 5) return (
+    <>
+      <audio ref={audioRef} src="/music.mp3" preload="auto" />
+      <MuteBtn muted={muted} onToggle={toggleMute} />
+      <BirthdayScreen onNext={() => setStep(6)} />
+    </>
+  )
+
+  if (step === 6) return (
     <>
       <audio ref={audioRef} src="/music.mp3" preload="auto" />
       <MuteBtn muted={muted} onToggle={toggleMute} />
@@ -344,7 +353,7 @@ export default function App() {
           {step === 3 && (
             <Wrapper keyName="fesse">
               <QuestionHeader num={3} total={3} title="QUESTION SENSIBLE" />
-              <Terminal>" Quelle est ta fesse préférée d'Asma ?"</Terminal>
+              <Terminal>" Quelle est la fesse préférée de ton amoureuse ?"</Terminal>
 
               {!fesseRevealed ? (
                 <div className="w-full space-y-3">
@@ -363,8 +372,8 @@ export default function App() {
                   <div className="w-full bg-black border border-gray-700 rounded p-4">
                     <div className="text-gray-400 text-xs mb-2">{'>'} ANALYSE EN COURS...</div>
                     <div className="text-white text-sm leading-relaxed tracking-wide">
-                      Dossier déclassifié<br /><br />
-                      La vérité est la suivante :<br />
+                      Mauvaise réponse <br /><br />
+                      La réponse était la suivante :<br />
                       <span className="font-bold">elle les aime autant l'une que l'autre.</span><br /><br />
                       <span className="text-gray-400 text-xs">Mais on passe pour cette fois. 😏</span>
                     </div>
