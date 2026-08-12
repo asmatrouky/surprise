@@ -221,9 +221,9 @@ export default function App() {
           {step === 0 && (
             <Wrapper keyName="pin">
               <div className="text-center">
-                <div className="text-white text-xs tracking-widest mb-1 opacity-70">AGENT SECRET</div>
+                <div className="text-white text-xs tracking-widest mb-1 opacity-70">  </div>
                 <div className="text-white text-2xl font-bold tracking-wider">⬡ ACCÈS RESTREINT ⬡</div>
-                <div className="text-gray-400 text-xs tracking-widest mt-1">DOSSIER CLASSIFIÉ — CODE REQUIS</div>
+                <div className="text-gray-400 text-xs tracking-widest mt-1"> CONTENU CLASSIFIÉ — CODE REQUIS</div>
               </div>
 
               <div className="w-full bg-black border border-gray-700 rounded p-3 text-gray-400 text-xs space-y-1 min-h-[100px]">
